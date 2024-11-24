@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "bf44f954-1274-403e-be21-66e86d837c1e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39827919"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1629/notes/new_note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes/new_note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "still dont kno man"
+				},
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes/new_note2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "still dont kno man"
+				},
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes/new_note",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "still dont kno man"
+				},
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes/new_note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes/new_note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/notes/new_note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes",
+						"new_note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/UploadForm.html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/UploadForm.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"UploadForm.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1629/write",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1629/write",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1629",
+					"path": [
+						"write"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,3 @@
+bread x1
+egg x10
+water 2l
