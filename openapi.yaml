@@ -1,0 +1,129 @@
+openapi: 3.0.3
+info:
+  title: Notes Manager API
+  description: |-
+    API for working with text notes
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+tags:
+  - name: notes
+    description: Operations with the notes
+  - name: forms
+    description: Static html forms
+paths:
+  /UploadForm.html:
+    get:
+      tags:
+        - forms
+      summary: Gets form for submiting a new note
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            text/html:
+              schema:
+                type: string
+  /notes:
+    get:
+      tags:
+        - notes
+      summary: Gets information about all notes
+      operationId: getNotes
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notes'
+    post:
+      tags:
+        - notes
+      summary: Creates a new note
+      description: Creates a new note
+      requestBody:
+        content: 
+          multipart/form-data: 
+            schema:           
+              type: object
+              properties:      
+                note_name:
+                  type: string
+                note:    
+                  type: string
+      responses:
+        '201':
+          description: Sucessfull operation
+        '400':
+          description: Bad request
+  /notes/{noteId}:
+    get:
+      tags:
+        - notes
+      parameters:
+        - name: noteId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Sucessfull opration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/note'
+        '404':
+          description: Note not found
+    put:
+      tags:
+        - notes
+      parameters:
+        - name: noteId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Update an existent user in the store
+        content:
+          application/text:
+            schema: 
+              type: string
+      responses:
+        '200':
+          description: Sucessfull operation
+        '404':
+          description: Note not found
+    delete:
+      tags:
+        - notes
+      parameters:
+        - name: noteId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Sucessfull operation
+        '404':
+          description: Note not found
+      
+components:
+  schemas:
+    note:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "testnote"
+        text:
+          type: string
+          example: "Lorem ipsum...."      
+    notes:
+      type: array
+      items:
+        $ref: '#/components/schemas/notes'
+            

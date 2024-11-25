@@ -5,12 +5,17 @@ const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const upload = multer();
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yaml')
 program
 .option('-h, --host <server host>')
 .option('-p, --port <server port>')
 .option('-c, --cache <cache directory>');
 program.parse();
 const options = program.opts();
+const swag_file = fs.readFileSync('./openapi.yaml', 'utf8');
+const swagger_document = YAML.parse(swag_file);
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swagger_document));
     app.get('/UploadForm.html', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, 'UploadForm.html'));
     });
